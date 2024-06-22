@@ -10,3 +10,5 @@ appsettings.Production.json
 App.config
 DragonSpiritsINFight.sln.DotSettings.user
 .env
+.sqlite
+DragonSpiritsINFight/Assets/Media/
