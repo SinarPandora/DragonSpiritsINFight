@@ -11,6 +11,8 @@
 
 ## 开发进度
 
+[设计文档](https://docs.qq.com/doc/DRkVCcUtBbHFoYmpT?is_no_hook_redirect=1)
+
 - [x] 基础框架
 - [ ] 战斗系统
 - [ ] 养成系统
