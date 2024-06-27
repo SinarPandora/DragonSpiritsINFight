@@ -4,6 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:lang="clr-namespace:DragonSpiritsINFight.Assets"
         xmlns:mainWindow="clr-namespace:DragonSpiritsINFight.ViewModels.MainWindow"
+        xmlns:materialIcons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DragonSpiritsINFight.Views.MainWindow.MainWindow"
         x:DataType="mainWindow:MainWindowViewModel"
@@ -11,41 +12,65 @@
         Title="{x:Static lang:Resources.AppName}"
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent"
-        ExtendClientAreaToDecorationsHint="False">
+        ExtendClientAreaToDecorationsHint="False"
+        Width="800"
+        Height="450"
+        CanResize="False">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <mainWindow:MainWindowViewModel />
     </Design.DataContext>
+    
+    <Window.Resources>
+        <ResourceDictionary >
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <Color x:Key="AcrylicBackground">White</Color>
+                    <SolidColorBrush x:Key="MainWindowBackground">White</SolidColorBrush>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <!-- ReSharper disable Xaml.RedundantResource -->
+                    <Color x:Key="AcrylicBackground">Black</Color>
+                    <SolidColorBrush x:Key="MainWindowBackground">DimGray</SolidColorBrush>
+                    <!-- ReSharper restore Xaml.RedundantResource -->
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
 
     <Panel>
         <ExperimentalAcrylicBorder IsHitTestVisible="False">
             <ExperimentalAcrylicBorder.Material>
                 <ExperimentalAcrylicMaterial
                     BackgroundSource="Digger"
-                    TintColor="White"
+                    TintColor="{DynamicResource AcrylicBackground}"
                     TintOpacity="1"
-                    MaterialOpacity="0.8">
+                    MaterialOpacity="0.65">
                 </ExperimentalAcrylicMaterial>
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
 
-        <SplitView IsPaneOpen="{Binding IsSideMenuOpen}"
-                   OpenPaneLength="300"
+        <SplitView IsPaneOpen="{Binding IsSideNavOpen}"
+                   OpenPaneLength="200"
                    CompactPaneLength="48"
                    DisplayMode="CompactInline"
-                   Background="LightGray"
-                   PaneBackground="White">
+                   Background="Transparent"
+                   PaneBackground="Transparent">
             <SplitView.Pane>
-                <StackPanel>
-                    <Button Command="{Binding ToggleSideMenu}">
-                        -
+                <StackPanel Spacing="5" Margin="5">
+                    <Button Command="{Binding ToggleSideNav}"
+                            Content="{materialIcons:MaterialIconExt Kind=Menu, Size=20}">
                     </Button>
-                    <ListBox ItemsSource="{Binding NavItems}" SelectedItem="{Binding SelectNavItem}">
+                    <ListBox ItemsSource="{Binding NavItems}"
+                             SelectedItem="{Binding SelectNavItem}">
                         <ListBox.ItemTemplate>
                             <DataTemplate DataType="{x:Type mainWindow:NavItemTemplate}">
                                 <StackPanel Spacing="15" Orientation="Horizontal">
+                                    <materialIcons:MaterialIcon Kind="{Binding Icon}">
+                                    </materialIcons:MaterialIcon>
                                     <TextBlock Text="{Binding Label}"></TextBlock>
                                 </StackPanel>
                             </DataTemplate>
@@ -54,9 +79,11 @@
                 </StackPanel>
             </SplitView.Pane>
             <SplitView.Content>
-                <Border CornerRadius="12 0 0 0" Background="White">
-                    <TransitioningContentControl Content="{Binding CurrentPage}">
-                    </TransitioningContentControl>
+                <Border CornerRadius="12 0 0 12" Background="{DynamicResource MainWindowBackground}">
+                    <StackPanel Margin="20">
+                        <TransitioningContentControl Content="{Binding CurrentPage}">
+                        </TransitioningContentControl>
+                    </StackPanel>
                 </Border>
             </SplitView.Content>
         </SplitView>
