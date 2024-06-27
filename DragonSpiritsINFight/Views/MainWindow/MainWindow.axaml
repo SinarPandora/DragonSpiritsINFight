@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lang="clr-namespace:DragonSpiritsINFight.Assets"
+        xmlns:mainWindow="clr-namespace:DragonSpiritsINFight.ViewModels.MainWindow"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DragonSpiritsINFight.Views.MainWindow.MainWindow"
+        x:DataType="mainWindow:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{x:Static lang:Resources.AppName}"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="False">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <mainWindow:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="White"
+                    TintOpacity="1"
+                    MaterialOpacity="0.8">
+                </ExperimentalAcrylicMaterial>
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
+        <SplitView IsPaneOpen="{Binding IsSideMenuOpen}"
+                   OpenPaneLength="300"
+                   CompactPaneLength="48"
+                   DisplayMode="CompactInline"
+                   Background="LightGray"
+                   PaneBackground="White">
+            <SplitView.Pane>
+                <StackPanel>
+                    <Button Command="{Binding ToggleSideMenu}">
+                        -
+                    </Button>
+                    <ListBox ItemsSource="{Binding NavItems}" SelectedItem="{Binding SelectNavItem}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="{x:Type mainWindow:NavItemTemplate}">
+                                <StackPanel Spacing="15" Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Label}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Border CornerRadius="12 0 0 0" Background="White">
+                    <TransitioningContentControl Content="{Binding CurrentPage}">
+                    </TransitioningContentControl>
+                </Border>
+            </SplitView.Content>
+        </SplitView>
+    </Panel>
+</Window>
