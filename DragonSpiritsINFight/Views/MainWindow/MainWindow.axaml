@@ -22,9 +22,9 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <mainWindow:MainWindowViewModel />
     </Design.DataContext>
-    
+
     <Window.Resources>
-        <ResourceDictionary >
+        <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
                     <Color x:Key="AcrylicBackground">White</Color>
@@ -48,8 +48,7 @@
                     BackgroundSource="Digger"
                     TintColor="{DynamicResource AcrylicBackground}"
                     TintOpacity="1"
-                    MaterialOpacity="0.65">
-                </ExperimentalAcrylicMaterial>
+                    MaterialOpacity="0.65" />
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
 
@@ -62,16 +61,14 @@
             <SplitView.Pane>
                 <StackPanel Spacing="5" Margin="5">
                     <Button Command="{Binding ToggleSideNav}"
-                            Content="{materialIcons:MaterialIconExt Kind=Menu, Size=20}">
-                    </Button>
+                            Content="{materialIcons:MaterialIconExt Kind=Menu, Size=20}" />
                     <ListBox ItemsSource="{Binding NavItems}"
                              SelectedItem="{Binding SelectNavItem}">
                         <ListBox.ItemTemplate>
                             <DataTemplate DataType="{x:Type mainWindow:NavItemTemplate}">
                                 <StackPanel Spacing="15" Orientation="Horizontal">
-                                    <materialIcons:MaterialIcon Kind="{Binding Icon}">
-                                    </materialIcons:MaterialIcon>
-                                    <TextBlock Text="{Binding Label}"></TextBlock>
+                                    <materialIcons:MaterialIcon Kind="{Binding Icon}" />
+                                    <TextBlock Text="{Binding Label}" />
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -81,8 +78,7 @@
             <SplitView.Content>
                 <Border CornerRadius="12 0 0 12" Background="{DynamicResource MainWindowBackground}">
                     <StackPanel Margin="20">
-                        <TransitioningContentControl Content="{Binding CurrentPage}">
-                        </TransitioningContentControl>
+                        <TransitioningContentControl Content="{Binding CurrentPage}" />
                     </StackPanel>
                 </Border>
             </SplitView.Content>

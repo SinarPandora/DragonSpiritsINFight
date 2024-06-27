@@ -5,5 +5,4 @@ namespace DragonSpiritsINFight.ViewModels.MainWindow.Pages;
 /// </summary>
 public class HomePageViewModel : ViewModelBase
 {
-    
 }
