@@ -35,7 +35,11 @@ public partial class MainWindowViewModel : ViewModelBase
     public ObservableCollection<NavItemTemplate> NavItems { get; } =
     [
         new NavItemTemplate(typeof(HomePageViewModel), "概览", MaterialIconKind.ViewDashboardOutline),
-        new NavItemTemplate(typeof(PartyPageViewModel), "编队", MaterialIconKind.ListBoxOutline)
+        new NavItemTemplate(typeof(PartyPageViewModel), "编队", MaterialIconKind.ListBoxOutline),
+        new NavItemTemplate(typeof(BattlePageViewModel), "战斗", MaterialIconKind.Fencing),
+        new NavItemTemplate(typeof(ExplorerPageViewModel), "探索", MaterialIconKind.CompassOutline),
+        new NavItemTemplate(typeof(TrainingPageViewModel), "训练", MaterialIconKind.TimerOutline),
+        new NavItemTemplate(typeof(SettingPageViewModel), "设置", MaterialIconKind.SettingsOutline),
     ];
 
     /// <summary>

@@ -24,6 +24,7 @@
     </Design.DataContext>
 
     <Window.Resources>
+        <!-- 颜色变量 -->
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
@@ -42,6 +43,7 @@
     </Window.Resources>
 
     <Panel>
+        <!-- 亚克力背景特效 -->
         <ExperimentalAcrylicBorder IsHitTestVisible="False">
             <ExperimentalAcrylicBorder.Material>
                 <ExperimentalAcrylicMaterial
@@ -52,18 +54,21 @@
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
 
+        <!-- 分割视图 -->
         <SplitView IsPaneOpen="{Binding IsSideNavOpen}"
                    OpenPaneLength="200"
                    CompactPaneLength="48"
                    DisplayMode="CompactInline"
                    Background="Transparent"
                    PaneBackground="Transparent">
+            <!-- 侧边导航 -->
             <SplitView.Pane>
                 <StackPanel Spacing="5" Margin="5">
                     <Button Command="{Binding ToggleSideNav}"
                             Content="{materialIcons:MaterialIconExt Kind=Menu, Size=20}" />
                     <ListBox ItemsSource="{Binding NavItems}"
-                             SelectedItem="{Binding SelectNavItem}">
+                             SelectedItem="{Binding SelectNavItem}"
+                             SelectionMode="AlwaysSelected">
                         <ListBox.ItemTemplate>
                             <DataTemplate DataType="{x:Type mainWindow:NavItemTemplate}">
                                 <StackPanel Spacing="15" Orientation="Horizontal">
@@ -75,9 +80,11 @@
                     </ListBox>
                 </StackPanel>
             </SplitView.Pane>
+            <!-- 当前页面 -->
             <SplitView.Content>
                 <Border CornerRadius="12 0 0 12" Background="{DynamicResource MainWindowBackground}">
                     <StackPanel Margin="20">
+                        <!-- 路由视图 -->
                         <TransitioningContentControl Content="{Binding CurrentPage}" />
                     </StackPanel>
                 </Border>

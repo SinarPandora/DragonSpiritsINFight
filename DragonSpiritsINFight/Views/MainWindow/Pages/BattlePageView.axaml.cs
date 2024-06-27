@@ -4,12 +4,12 @@ using JetBrains.Annotations;
 namespace DragonSpiritsINFight.Views.MainWindow.Pages;
 
 /// <summary>
-///     概览页视图
+///     战斗页视图
 /// </summary>
 [UsedImplicitly]
-public partial class HomePageView : UserControl
+public partial class BattlePageView : UserControl
 {
-    public HomePageView()
+    public BattlePageView()
     {
         InitializeComponent();
     }
