@@ -1,0 +1,66 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="AppName" xml:space="preserve">
+        <value>龙魂无限斗</value>
+    </data>
+    <data name="Home_PageName" xml:space="preserve">
+        <value>概览</value>
+    </data>
+    <data name="Party_PageName" xml:space="preserve">
+        <value>编队</value>
+    </data>
+    <data name="Battle_PageName" xml:space="preserve">
+        <value>战斗</value>
+    </data>
+    <data name="Explorer_PageName" xml:space="preserve">
+        <value>探索</value>
+    </data>
+    <data name="Synthesize_PageName" xml:space="preserve">
+        <value>合成</value>
+    </data>
+    <data name="Training_PageName" xml:space="preserve">
+        <value>训练</value>
+    </data>
+    <data name="Setting_PageName" xml:space="preserve">
+        <value>配置</value>
+    </data>
+    <data name="Type_Unknown" xml:space="preserve">
+        <value>错误：未知的属性</value>
+    </data>
+    <data name="Type_Fire" xml:space="preserve">
+        <value>火</value>
+    </data>
+    <data name="Type_Water" xml:space="preserve">
+        <value>水</value>
+    </data>
+    <data name="Type_Windy" xml:space="preserve">
+        <value>风</value>
+    </data>
+    <data name="Type_Ground" xml:space="preserve">
+        <value>地</value>
+    </data>
+    <data name="Type_Light" xml:space="preserve">
+        <value>光</value>
+    </data>
+    <data name="Type_Dark" xml:space="preserve">
+        <value>暗</value>
+    </data>
+    <data name="Type_Ether" xml:space="preserve">
+        <value>以太</value>
+    </data>
+</root>

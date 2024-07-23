@@ -2,14 +2,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:lang="clr-namespace:DragonSpiritsINFight.Assets"
         xmlns:mainWindow="clr-namespace:DragonSpiritsINFight.ViewModels.MainWindow"
         xmlns:materialIcons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+        xmlns:assets="clr-namespace:DragonSpiritsINFight.Assets;assembly=INFight.Res"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DragonSpiritsINFight.Views.MainWindow.MainWindow"
         x:DataType="mainWindow:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="{x:Static lang:Resources.AppName}"
+        Title="{x:Static assets:Resources.AppName}"
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent"
         ExtendClientAreaToDecorationsHint="False"
@@ -67,10 +67,10 @@
                     <Button Command="{Binding ToggleSideNav}"
                             Content="{materialIcons:MaterialIconExt Kind=Menu, Size=20}" />
                     <ListBox ItemsSource="{Binding NavItems}"
-                             SelectedItem="{Binding SelectNavItem}"
+                             SelectedItem="{Binding SideNavItem}"
                              SelectionMode="AlwaysSelected">
                         <ListBox.ItemTemplate>
-                            <DataTemplate DataType="{x:Type mainWindow:NavItemTemplate}">
+                            <DataTemplate DataType="{x:Type mainWindow:SideNavItem}">
                                 <StackPanel Spacing="15" Orientation="Horizontal">
                                     <materialIcons:MaterialIcon Kind="{Binding Icon}" />
                                     <TextBlock Text="{Binding Label}" />

@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonSpiritsINFight", "DragonSpiritsINFight\DragonSpiritsINFight.csproj", "{29BA4CD6-5876-4DC9-B42F-14FC6FFCEB7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INFight.UI", "INFight.UI\INFight.UI.csproj", "{29BA4CD6-5876-4DC9-B42F-14FC6FFCEB7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INFight.Core", "INFight.Core\INFight.Core.csproj", "{5C502A44-37DC-446B-9C2D-AF70CAE65C82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INFight.Res", "INFight.Res\INFight.Res.csproj", "{00509AE1-2BF1-4A39-BA26-3E907E295FEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{29BA4CD6-5876-4DC9-B42F-14FC6FFCEB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29BA4CD6-5876-4DC9-B42F-14FC6FFCEB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29BA4CD6-5876-4DC9-B42F-14FC6FFCEB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C502A44-37DC-446B-9C2D-AF70CAE65C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C502A44-37DC-446B-9C2D-AF70CAE65C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C502A44-37DC-446B-9C2D-AF70CAE65C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C502A44-37DC-446B-9C2D-AF70CAE65C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00509AE1-2BF1-4A39-BA26-3E907E295FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00509AE1-2BF1-4A39-BA26-3E907E295FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00509AE1-2BF1-4A39-BA26-3E907E295FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00509AE1-2BF1-4A39-BA26-3E907E295FEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
