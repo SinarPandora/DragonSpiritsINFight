@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>DragonSpiritsINFight</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\INFight.Res\InFight.Res.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2023.3.0"/>
+        <PackageReference Include="NLog" Version="5.3.2"/>
+        <PackageReference Include="NLog.Extensions.Logging" Version="5.3.11"/>
+        <PackageReference Include="LanguageExt.Core" Version="4.4.9"/>
+        <PackageReference Include="NLua" Version="1.7.3" />
+        <PackageReference Include="Z.ExtensionMethods" Version="2.1.1"/>
+    </ItemGroup>
+</Project>

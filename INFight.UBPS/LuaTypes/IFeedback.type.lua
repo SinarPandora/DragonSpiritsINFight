@@ -1,0 +1,12 @@
+---@class IFeedback
+---@field public Render fun()
+---@field public WaitingUiUpdate fun()
+---@field public PlayBuffEffect fun(teamId: number | nil, type: '单位' | '队伍' | '场地', name: string)
+---@field public PlaySkillEffect fun(teamId: number, name: string)
+---@field public PlayMasterSkillEffect fun(teamId: number, name: string)
+---@field public SwitchBGM fun(name: string)
+---@field public PlayVoice fun(text: string)
+---@field public Toast fun(text: string)
+---@field public CheckMasterSkillApply fun(): string | nil
+---@field public NotifyMasterSkillApplied fun()
+---@field public Panic fun(error: string)

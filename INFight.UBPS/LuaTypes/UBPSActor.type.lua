@@ -1,0 +1,9 @@
+---@class UBPSActor
+---@field public Name string
+---@field public HP number
+---@field public Alive boolean
+---@field public Props table<string, number | string | string[]>
+---@field public OriginalProps table<string, number | string>
+---@field public Buffs table<string, Buff>
+---@field public SkillSeqIndex number 注意：从 1 开始
+---@field public SkillSeq Skill[]

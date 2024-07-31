@@ -1,0 +1,6 @@
+---@class Team
+---@field public Id number
+---@field public Main UBPSActor
+---@field public Subs UBPSActor[]
+---@field public Buffs table<string, Buff>
+---@field public MasterSkills table<string, Skill>

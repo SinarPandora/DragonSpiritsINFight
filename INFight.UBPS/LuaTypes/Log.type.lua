@@ -1,0 +1,5 @@
+---@class Log
+---@field public Warn fun(text: string)
+---@field public Info fun(text: string)
+---@field public Error fun(text: string)
+---@field public Debug fun(text: string)
