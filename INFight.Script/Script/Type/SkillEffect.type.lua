@@ -1,0 +1,3 @@
+---@class SkillEffect
+---@field public Active fun(): boolean, number 是否触发成功，以及下一个技能的索引偏移量
+---@field public Cooldown nil | fun(): boolean

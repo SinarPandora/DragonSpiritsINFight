@@ -1,0 +1,6 @@
+---@class BuffEffect
+---@field public Create fun(origin: Buff | nil): Buff
+---@field public RunOnSkillActive fun(actor: UBPSActor): boolean
+---@field public RunForField fun(field: Battlefield): boolean
+---@field public RunForActor fun(actor: UBPSActor): boolean
+---@field public RunForTeam fun(team: Team): boolean
